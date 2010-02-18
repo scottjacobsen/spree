@@ -31,8 +31,8 @@
           (<%= t("whats_this") %>)
         </a>
       </p>
-      <%= creditcard_form.hidden_field :first_name -%>
-      <%= creditcard_form.hidden_field :last_name -%>
+      <%= creditcard_form.hidden_field :first_name, :value => h(billing_firstname) -%>
+      <%= creditcard_form.hidden_field :last_name, :value => h(billing_lastname) -%>
     </div>
   <% end %>
 

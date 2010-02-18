@@ -23,5 +23,12 @@ module CheckoutsHelper
     end
     content_tag('ol', steps.join("\n"), :class => 'progress-steps', :id => "checkout-step-#{@checkout.state}") + '<br clear="left" />'
   end
-  
+
+   def billing_firstname
+    @checkout.bill_address.firstname  rescue ''
+  end
+
+  def billing_lastname
+    @checkout.bill_address.lastname  rescue ''
+  end
 end
